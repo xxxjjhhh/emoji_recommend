@@ -4,7 +4,7 @@ import http.client
 
 class NcpApiCall():
     def __init__(self) -> None:
-        self.__host = ''
+        self.__host = 'clovastudio.apigw.ntruss.com'
         self.__path = ''
         self.__api_key = ''
         self.__api_key_primary_val = ''
