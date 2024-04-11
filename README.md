@@ -22,9 +22,10 @@ npm i emoji_korean
   - emoji_korean.json : 한국어 설명을 가진 이모지 json 파일
   - emoji_vector.json : 한국어 설명에 대한 1024차원 임베딩 벡터를 가진 이모지 hexcode json 파일
 - emoji_vector
-  - jsonExecutor.py : 
-  - ncpApiCall.py : 
-  - wordToVec.py : 
+  - jsonExecutor.py : asset 경로에 존재하는 json 파일 읽기, 쓰기 파일
+  - ncpApiCall.py : NCP 클로바 스튜디오 임베딩 API 호출 파일
+  - wordToVec.py : emoji_korean.json 파일을 불러와 각각의 이모지 설명에 대한 NCP 클로바 스튜디오 1024차원 임베딩 벡터를 획득하고 emoji_vector.json으로 만드는 파일
+- local_test
   
 </code></pre>
 
