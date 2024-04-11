@@ -21,7 +21,10 @@ npm i emoji_korean
 - asset
   - emoji_korean.json : 한국어 설명을 가진 이모지 json 파일
   - emoji_vector.json : 한국어 설명에 대한 1024차원 임베딩 벡터를 가진 이모지 hexcode json 파일
-- emoji_vector :
+- emoji_vector
+  - jsonExecutor.py : 
+  - ncpApiCall.py : 
+  - wordToVec.py : 
   
 </code></pre>
 
