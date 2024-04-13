@@ -31,6 +31,8 @@ npm i emoji_korean
 
 ## NCP 클로바 스튜디오 임베딩 API
 
+NCP 콘솔 > CLOVA Studio > 임베딩
 
+https://console.ncloud.com/clova-studio/product
 
 ---
