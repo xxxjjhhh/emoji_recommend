@@ -35,4 +35,63 @@ NCP 콘솔 > CLOVA Studio > 임베딩
 
 https://console.ncloud.com/clova-studio/product
 
+- API 호출 파이썬 SDK
+<pre><code>
+
+  # -*- coding: utf-8 -*-
+
+import base64
+import json
+import http.client
+
+
+class CompletionExecutor:
+    def __init__(self, host, api_key, api_key_primary_val, request_id):
+        self._host = host
+        self._api_key = api_key
+        self._api_key_primary_val = api_key_primary_val
+        self._request_id = request_id
+
+    def _send_request(self, completion_request):
+        headers = {
+            'Content-Type': 'application/json; charset=utf-8',
+            'X-NCP-CLOVASTUDIO-API-KEY': self._api_key,
+            'X-NCP-APIGW-API-KEY': self._api_key_primary_val,
+            'X-NCP-CLOVASTUDIO-REQUEST-ID': self._request_id
+        }
+
+        conn = http.client.HTTPSConnection(self._host)
+        conn.request('POST', '/testapp/v1/api-tools/embedding/clir-emb-dolphin/a94490cc05eb4467859045836eb77d04', json.dumps(completion_request), headers)
+        response = conn.getresponse()
+        result = json.loads(response.read().decode(encoding='utf-8'))
+        conn.close()
+        return result
+
+    def execute(self, completion_request):
+        res = self._send_request(completion_request)
+        if res['status']['code'] == '20000':
+            return res['result']['embedding']
+        else:
+            return 'Error'
+
+
+if __name__ == '__main__':
+    completion_executor = CompletionExecutor(
+        host='clovastudio.apigw.ntruss.com',
+        api_key='NTA0MjU2MWZlZTcxNDJiY1hwQAv1f9N2hXCKeNLejej4xsafLclhA+rTcTphvp8q',
+        api_key_primary_val = 'k5TdtxTKiZi4O7gi6uidLBXnqzU4eG0vmBfF9Ys0',
+        request_id='f0fda080-70d1-4d3d-8edd-b6f9fd0cb1e0'
+    )
+
+    request_data = json.loads("""{
+  "text" : "웃는 얼굴"
+}""", strict=False)
+
+    response_text = completion_executor.execute(request_data)
+    print(request_data)
+    print(response_text)
+
+  
+</code></pre>
+
 ---
