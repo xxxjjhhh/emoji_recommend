@@ -9,6 +9,7 @@
 <pre><code>
 
 - asset
+- aws_lambda
   - emoji_korean.json : 한국어 설명을 가진 이모지 json 파일
   - emoji_vector.json : 한국어 설명에 대한 1024차원 임베딩 벡터를 가진 이모지 hexcode json 파일
 - emoji_vector
@@ -95,5 +96,7 @@ if __name__ == '__main__':
 </code></pre>
 
 ## 테스트
+
+## aws lambda 10MB 제한 문제
 
 ---
