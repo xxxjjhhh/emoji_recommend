@@ -11,9 +11,9 @@ def distance(vector1: list, vector2: list) -> float:
     
     return math.sqrt(sum_of_squares)
 
-def call_api(hexcode: str) -> list:
+def call_api(title: str) -> list:
     
-    request_data = json.loads(f'{{"text": "{hexcode}"}}', strict=False)
+    request_data = json.loads(f'{{"text": "{title}"}}', strict=False)
     # call api, res : list
     return ncpApiCall.execute(request_data)
     
@@ -21,9 +21,9 @@ def call_api(hexcode: str) -> list:
 def lambda_handler(event, context):
     
     request_body = json.loads(event['body'])
-    hexcode = request_body.get('hexcode', None)
+    title = request_body.get('title', None)
     
-    response_data = call_api(hexcode)
+    response_data = call_api(title)
     
     with open("./emoji_vector.json") as file:
         candidate_data = json.load(file)
