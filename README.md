@@ -95,8 +95,8 @@ if __name__ == '__main__':
   
 </code></pre>
 
-## 테스트
+## Lambda 테스트
 
-## aws lambda 10MB 제한 문제
+## AWS Lambda 10MB 제한 문제
 
 ---
