@@ -95,6 +95,12 @@ if __name__ == '__main__':
   
 </code></pre>
 
+## NCP 클로바 스튜디오 임베딩 API 제공 모델
+
+- clir-emb-dolphin : 도메인과 무관한 범용성
+- clir-sts-dolphin : 작은 범위에서 세부적으로 유사도 체크
+
+
 ## Lambda 테스트
 
 ## AWS Lambda 10MB 제한 문제
