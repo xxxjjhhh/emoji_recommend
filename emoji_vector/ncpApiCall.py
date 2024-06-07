@@ -2,7 +2,7 @@
 import json
 import http.client
 
-class NcpApiCall():
+class NcpApiCall:
     def __init__(self) -> None:
         self.__host = 'clovastudio.apigw.ntruss.com'
         self.__path = '/testapp/v1/api-tools/embedding/clir-emb-dolphin/a94490cc05eb4467859045836eb77d04'
