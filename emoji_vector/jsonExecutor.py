@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 
-class JonsExecutor():
+class JonsExecutor:
     def __init__(self) -> None:
         self.__read_path = '../asset/emoji_korean.json'
         self.__write_path = '../asset/emoji_vector.json'
