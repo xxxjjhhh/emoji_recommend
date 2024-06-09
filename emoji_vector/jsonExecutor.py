@@ -7,7 +7,7 @@ class JonsExecutor:
         self.__write_path = '../asset/emoji_vector.json'
 
     def read_file(self) -> list:
-        with open(self.__read_path) as file:
+        with open(self.__read_path, encoding='utf-8') as file:
             json_data = json.load(file)
 
         return json_data
