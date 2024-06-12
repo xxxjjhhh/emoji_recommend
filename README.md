@@ -62,7 +62,7 @@ class CompletionExecutor:
         }
 
         conn = http.client.HTTPSConnection(self._host)
-        conn.request('POST', '/testapp/v1/api-tools/embedding/clir-emb-dolphin/a94490cc05eb4467859045836eb77d04', json.dumps(completion_request), headers)
+        conn.request('POST', '/testapp/v1/api-tools/embedding/clir-emb-dolphin/a9생략', json.dumps(completion_request), headers)
         response = conn.getresponse()
         result = json.loads(response.read().decode(encoding='utf-8'))
         conn.close()
@@ -79,9 +79,9 @@ class CompletionExecutor:
 if __name__ == '__main__':
     completion_executor = CompletionExecutor(
         host='clovastudio.apigw.ntruss.com',
-        api_key='NTA0MjU2MWZlZTcxNDJiY8PymlAy1/NbUwjSOdrpZy9Lld76ceoqaWOH9Xn5zDKt',
-        api_key_primary_val = 'Oo5ZzbtiCS46dZfye2dV4uizSx95pUJaNSzm45wd',
-        request_id='a54ad6aa-805c-41ff-8357-217a24bb5ab2'
+        api_key='',
+        api_key_primary_val = '',
+        request_id=''
     )
 
     request_data = json.loads("""{
