@@ -10,10 +10,8 @@ def distance(vector1: list, vector2: list) -> float:
     sum_of_squares = sum((v2 - v1) ** 2 for v1, v2 in zip(vector1, vector2))
     return math.sqrt(sum_of_squares)
 
-def lambda_handler() -> None:
+def main() -> None:
 
-    #request_body = event['body']
-    #title = request_body['title']
     title = ""
 
     request_data = json.loads(f'{{"text": "{title}"}}', strict=False)
@@ -35,4 +33,4 @@ def lambda_handler() -> None:
     print(min_hexcode)
 
 if __name__ == '__main__':
-    lambda_handler()
+    main()
