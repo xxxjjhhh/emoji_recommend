@@ -5,10 +5,10 @@ import http.client
 class NcpApiCall:
     def __init__(self) -> None:
         self.__host = 'clovastudio.apigw.ntruss.com'
-        self.__path = '/testapp/v1/api-tools/embedding/clir-emb-dolphin/a94490cc05eb4467859045836eb77d04'
-        self.__api_key = 'NTA0MjU2MWZlZTcxNDJiY8PymlAy1/NbUwjSOdrpZy9Lld76ceoqaWOH9Xn5zDKt'
-        self.__api_key_primary_val = 'Oo5ZzbtiCS46dZfye2dV4uizSx95pUJaNSzm45wd'
-        self.__request_id = 'a54ad6aa-805c-41ff-8357-217a24bb5ab2'
+        self.__path = '/testapp/v1/api-tools/embedding/clir-emb-dolphin/a9생략'
+        self.__api_key = ''
+        self.__api_key_primary_val = ''
+        self.__request_id = ''
 
     def __send_request(self, completion_request) -> any:
         headers = {
