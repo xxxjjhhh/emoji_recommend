@@ -2,11 +2,11 @@
 import json
 
 from ncpApiCall import NcpApiCall
-from jsonExecutor import JonsExecutor
+from jsonExecutor import JsonExecutor
 
 # class init
 ncpApiCall = NcpApiCall()
-jsonExecutor = JonsExecutor()
+jsonExecutor = JsonExecutor()
 
 
 def call_api() -> list:
