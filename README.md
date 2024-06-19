@@ -108,8 +108,14 @@ if __name__ == '__main__':
 
 ## Lambda 테스트
 
-## AWS Lambda 10MB 제한 문제
+## AWS Lambda 업로딩 10MB 제한 문제
+
+AWS S3를 활용하면 좋으나 Lambda에 직접 올려도 사용은 가능
 
 ## Lambda Timeout 문제
+
+Lambda 메모리 용량을 늘리면 무방, emoji를 벡터화 시킨 emoji_vector.json 파일 자체를 파이썬 변수로 올려서 구동 시키는게 훨씬 빠르게 로딩됨
+
+약 1300개의 이모지 hexcode에 대한 벡터 데이터를 가지는 코드는 메모리 용량 1300MB ~ 1500MB가 필요 (Python3.12)
 
 ---
